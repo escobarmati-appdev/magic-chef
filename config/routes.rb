@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
   # Ingredients resource:
-  get("/recipes", {:controller => "recipes" , :action => "index"})
+  get("/ingredients", {:controller => "ingredients" , :action => "index"})
 
-  #Create
+  # Recipe results
 
-  post("/insert_ingredients", { :controller => "messages", :action => "create" })
+  get("/recipe", {:controller => "ingredients" , :action => "recipe"})
+
+  #post("/insert_ingredients", { :controller => "messages", :action => "create" })
 
 end
